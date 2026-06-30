@@ -19,13 +19,13 @@ export default function Contact({ isDark }: ContactProps) {
     {
       title: 'LinkedIn',
       value: 'Connect on LinkedIn',
-      href: 'https://linkedin.com/in/saatwiktiwari',
+      href: 'https://www.linkedin.com/in/saatwik-tiwari-336b86301/',
       icon: 'linkedin',
     },
     {
       title: 'GitHub',
       value: 'View my code',
-      href: 'https://github.com/saatwiktiwari',
+      href: 'https://github.com/Saatwik-ss',
       icon: 'github',
     },
   ];

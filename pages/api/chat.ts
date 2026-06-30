@@ -1,7 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const GROQ_API_KEY = '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';
+const GROQ_API_KEY = "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";
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+
+if (!GROQ_API_KEY) {
+  console.error('GROQ_API_KEY is not set in environment variables');
+}
 
 const systemPrompt = `You are Saatwik Tiwari's AI Career Copilot. You have comprehensive knowledge about Saatwik's background, projects, and expertise. Here's the information about Saatwik:
 
@@ -10,12 +14,11 @@ PERSONAL INFO:
 - Location: India
 - Email: saatwik.mail@gmail.com
 - Phone: +91 9045 330 144
-- LinkedIn: linkedin.com/in/saatwiktiwari
+// - LinkedIn: linkedin.com/in/hb jnkmmn bivsaatwiktiwari,
 - GitHub: github.com/saatwiktiwari
 
 EDUCATION:
 - B.E. Mathematics and Computing at BITS Pilani, Goa (2024-Present)
-- CGPA: 7.60/10 (After 2nd Semester)
 - Relevant Coursework: Data Structures & Algorithms, Linear Algebra, Discrete Mathematics, Probability & Statistics, Real Analysis
 
 TECHNICAL SKILLS:
@@ -68,7 +71,6 @@ interface Message {
 
 interface ChatRequest {
   messages: Message[];
-  userMessage: string;
 }
 
 interface ChatResponse {
@@ -83,20 +85,28 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  try {
-    const { messages, userMessage } = req.body as ChatRequest;
+  if (!GROQ_API_KEY) {
+    console.error('GROQ_API_KEY is missing');
+    return res.status(500).json({ error: 'API configuration error' });
+  }
 
-    // Build conversation history for Groq
-    const conversationMessages: Message[] = [
-      ...messages.map((msg) => ({
-        role: msg.role,
-        content: msg.content,
-      })),
-      {
-        role: 'user',
-        content: userMessage,
-      },
-    ];
+  try {
+    const { messages } = req.body as ChatRequest;
+
+    if (!Array.isArray(messages) || messages.length === 0) {
+      return res.status(400).json({ error: 'Invalid messages format' });
+    }
+
+    // Convert messages to Groq format
+    const conversationMessages: Message[] = messages.map((msg) => ({
+      role: msg.role,
+      content: msg.content,
+    }));
+
+    console.log('Sending to Groq:', {
+      model: 'llama-3.1-8b-instant',
+      messageCount: conversationMessages.length,
+    });
 
     const response = await fetch(GROQ_API_URL, {
       method: 'POST',
@@ -105,7 +115,7 @@ export default async function handler(
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'mixtral-8x7b-32768',
+        model: 'llama-3.1-8b-instant',
         messages: [
           {
             role: 'system',
@@ -118,18 +128,32 @@ export default async function handler(
       }),
     });
 
+    const responseData = await response.json();
+
     if (!response.ok) {
-      const error = await response.text();
-      console.error('Groq API error:', error);
-      return res.status(500).json({ error: 'Failed to get response from AI' });
+      console.error('Groq API error:', {
+        status: response.status,
+        statusText: response.statusText,
+        error: responseData,
+      });
+      
+      return res.status(response.status).json({ 
+        error: responseData.error?.message || 'Failed to get response from Groq API' 
+      });
     }
 
-    const data = await response.json();
-    const reply = data.choices[0].message.content;
+    if (!responseData.choices?.[0]?.message?.content) {
+      console.error('Unexpected Groq response format:', responseData);
+      return res.status(500).json({ error: 'Invalid response format from Groq' });
+    }
+
+    const reply = responseData.choices[0].message.content;
 
     return res.status(200).json({ reply });
   } catch (error) {
     console.error('Chat API error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    return res.status(500).json({ 
+      error: error instanceof Error ? error.message : 'Internal server error' 
+    });
   }
 }

@@ -14,10 +14,10 @@ export default function About({ isDark }: AboutProps) {
           <div className="space-y-6">
             <h3 className="text-xl font-semibold mb-4">Background</h3>
             <p className={`leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Currently a second-year student at BITS Pilani, Goa, pursuing B.E. in Mathematics and Computing with a CGPA of 7.60/10. My academic focus spans machine learning, numerical optimization, data structures, and artificial intelligence.
+              Currently a second-year student at BITS Pilani, Goa, pursuing B.E. in Mathematics and Computing. My academic focus spans machine learning, numerical optimization, data structures, and artificial intelligence.
             </p>
             <p className={`leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              I have worked on cutting-edge projects including Physics-Informed Neural Networks for solving PDEs, reinforcement learning-based game engines, and robotic simulations. Member of SAIDL (Society for Artificial Intelligence and Deep Learning) and PRAGYA research groups.
+              I have worked on some interesting projects including Physics-Informed Neural Networks for solving PDEs, reinforcement learning-based game engines, and robotic simulations. I am also a Member of SAIDL (Society for Artificial Intelligence and Deep Learning), which is the collegiate AI research group, and PRAGYA research groups and DataLab groups, which are college AI research labs headed by college faculty.
             </p>
           </div>
 
@@ -25,15 +25,9 @@ export default function About({ isDark }: AboutProps) {
             <h3 className="text-xl font-semibold mb-4">Interests & Passions</h3>
             <div className="space-y-3">
               <div>
-                <p className="font-medium mb-1">Sports & Physical Training</p>
+                <p className="font-medium mb-1">Personal Interests</p>
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Boxing and football are my primary outlets. I value discipline, strategy, and the mental resilience that comes with competitive sports.
-                </p>
-              </div>
-              <div>
-                <p className="font-medium mb-1">History & Medieval Period</p>
-                <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Fascinated by medieval history, military strategies, and the sociopolitical structures of past civilizations. This shapes how I think about problem-solving and systems design.
+                  I enjoy partaking in sports, I play boxing and football primariliy, but i also enjoy being part of a team through team sports. I also have a deep interest in history, especially medieval history, and I enjoy reading about the sociopolitical structures and military strategies of past civilizations.
                 </p>
               </div>
             </div>
@@ -47,9 +41,6 @@ export default function About({ isDark }: AboutProps) {
               <p className="font-semibold">B.E. Mathematics and Computing</p>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                 BITS Pilani, K. K. Birla Goa Campus (2024-Present)
-              </p>
-              <p className={`text-sm font-medium mt-2 ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`}>
-                CGPA: 7.60/10 (After 2nd Semester)
               </p>
             </div>
           </div>

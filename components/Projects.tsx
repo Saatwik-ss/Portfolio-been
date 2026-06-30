@@ -7,7 +7,7 @@ export default function Projects({ isDark }: ProjectsProps) {
     {
       title: 'Physics-Informed Neural Networks (PINNs)',
       description: 'Re-implemented research papers applying PINNs to solve nonlinear PDEs with experimental validation. Developed a transformer-assisted PINN for 3-D Navier-Stokes equations.',
-      status: 'Ongoing',
+      status: 'Completed',
       tags: ['PyTorch', 'Research', 'Numerical Methods', 'Scientific ML'],
     },
     {
@@ -25,7 +25,7 @@ export default function Projects({ isDark }: ProjectsProps) {
     {
       title: 'Spatial Reasoning Research',
       description: 'Member of PRAGYA research group at BITS Goa, working on spatial reasoning problems with focus on geometric understanding and visual intelligence.',
-      status: 'Ongoing',
+      status: 'Completed',
       tags: ['Research', 'Spatial Analysis', 'Computer Vision'],
     },
   ];

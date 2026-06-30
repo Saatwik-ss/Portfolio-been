@@ -13,7 +13,6 @@ export default function Hero({ isDark }: HeroProps) {
             <p className={`text-sm font-semibold tracking-wider mb-4 ${
               isDark ? 'text-indigo-400' : 'text-indigo-600'
             }`}>
-              OPEN TO OPPORTUNITIES
             </p>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
               Saatwik Tiwari
@@ -26,7 +25,7 @@ export default function Hero({ isDark }: HeroProps) {
           <p className={`text-lg leading-relaxed max-w-2xl ${
             isDark ? 'text-gray-300' : 'text-gray-700'
           }`}>
-            I build practical AI systems with emphasis on machine learning, physics-informed neural networks, reinforcement learning, and data-driven software deployed end to end.
+            I enjoy learning and working on AI systems, I've taken part in projects involving physics-informed neural networks, reinforcement learning, Hardware for AI and fullstack softwares deployed end to end.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

@@ -15,6 +15,7 @@ export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarP
     { label: 'Skills', id: 'skills' },
     { label: 'Projects', id: 'projects' },
     { label: 'Contact', id: 'contact' },
+    { label: 'Experience', id: 'experience' }
   ];
 
   const handleNavClick = (id: string) => {
