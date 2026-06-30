@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const GROQ_API_KEY = "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";
+const GROQ_API_KEY = "env.GROQ_API_KEY"; // Ensure this is set in your environment variables
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 if (!GROQ_API_KEY) {
