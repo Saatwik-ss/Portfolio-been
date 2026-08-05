@@ -38,12 +38,18 @@ export default function Copilot({ isDark }: CopilotProps) {
     e.preventDefault();
     if (!inputValue.trim() || isLoading) return;
 
+    const userContent = inputValue.trim();
     const userMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
-      content: inputValue,
+      content: userContent,
       timestamp: new Date(),
     };
+
+    const historyForApi = [
+      ...messages.map((m) => ({ role: m.role, content: m.content })),
+      { role: 'user' as const, content: userContent },
+    ];
 
     setMessages((prev) => [...prev, userMessage]);
     setInputValue('');
@@ -54,11 +60,7 @@ export default function Copilot({ isDark }: CopilotProps) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          messages: messages.map((m) => ({
-            role: m.role,
-            content: m.content,
-          })),
-          userMessage: inputValue,
+          messages: historyForApi,
         }),
       });
 
@@ -94,8 +96,8 @@ export default function Copilot({ isDark }: CopilotProps) {
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 z-40 ${
           isDark
-            ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
-            : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+            ? 'bg-teal-600 hover:bg-teal-700 text-white'
+            : 'bg-teal-600 hover:bg-teal-700 text-white'
         } shadow-lg hover:shadow-xl`}
         title="AI Career Copilot"
       >
@@ -136,8 +138,8 @@ export default function Copilot({ isDark }: CopilotProps) {
                   className={`max-w-xs px-4 py-2 rounded-lg text-sm ${
                     message.role === 'user'
                       ? isDark
-                        ? 'bg-indigo-600 text-white'
-                        : 'bg-indigo-600 text-white'
+                        ? 'bg-teal-600 text-white'
+                        : 'bg-teal-600 text-white'
                       : isDark
                       ? 'bg-gray-800 text-gray-200'
                       : 'bg-gray-200 text-gray-800'
@@ -172,8 +174,8 @@ export default function Copilot({ isDark }: CopilotProps) {
                 disabled={isLoading}
                 className={`flex-1 px-3 py-2 rounded-lg text-sm transition-colors duration-200 disabled:opacity-50 ${
                   isDark
-                    ? 'bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500'
-                    : 'bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500'
+                    ? 'bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500'
+                    : 'bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500'
                 }`}
               />
               <button
@@ -181,8 +183,8 @@ export default function Copilot({ isDark }: CopilotProps) {
                 disabled={isLoading || !inputValue.trim()}
                 className={`px-3 py-2 rounded-lg transition-all duration-200 disabled:opacity-50 ${
                   isDark
-                    ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
-                    : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                    ? 'bg-teal-600 hover:bg-teal-700 text-white'
+                    : 'bg-teal-600 hover:bg-teal-700 text-white'
                 }`}
               >
                 Send

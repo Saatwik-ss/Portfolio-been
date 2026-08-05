@@ -33,7 +33,7 @@ export default function Navbar({ isDark, toggleTheme, scrollToSection }: NavbarP
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-2">
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white ${
-              isDark ? 'bg-gradient-to-br from-indigo-500 to-purple-600' : 'bg-gradient-to-br from-indigo-600 to-purple-700'
+              isDark ? 'bg-gradient-to-br from-teal-500 to-cyan-600' : 'bg-gradient-to-br from-teal-600 to-cyan-700'
             }`}>
               ST
             </div>

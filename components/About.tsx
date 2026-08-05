@@ -14,10 +14,10 @@ export default function About({ isDark }: AboutProps) {
           <div className="space-y-6">
             <h3 className="text-xl font-semibold mb-4">Background</h3>
             <p className={`leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Currently a second-year student at BITS Pilani, Goa, pursuing B.E. in Mathematics and Computing. My academic focus spans machine learning, numerical optimization, data structures, and artificial intelligence.
+              Currently a second-year student at BITS Pilani, Goa, pursuing B.E. in Mathematics and Computing. My academic focus spans Machine learning, Numerical optimization, Full-stack development, and Hardware for machine learning.
             </p>
             <p className={`leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              I have worked on some interesting projects including Physics-Informed Neural Networks for solving PDEs, reinforcement learning-based game engines, and robotic simulations. I am also a Member of SAIDL (Society for Artificial Intelligence and Deep Learning), which is the collegiate AI research group, and PRAGYA research groups and DataLab groups, which are college AI research labs headed by college faculty.
+              Recent work includes Crystal (an AI coding assistant), OptiMover (a multiplayer board game platform), and AIMvL (an ML model registry). I have also interned at Caarya Innovative and TCS-Research DATA-LAB, and mentored ML fundamentals for 60+ students at BITS Pilani.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ export default function About({ isDark }: AboutProps) {
               <div>
                 <p className="font-medium mb-1">Personal Interests</p>
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                  I enjoy partaking in sports, I play boxing and football primariliy, but i also enjoy being part of a team through team sports. I also have a deep interest in history, especially medieval history, and I enjoy reading about the sociopolitical structures and military strategies of past civilizations.
+                  I enjoy partaking in sports, I play boxing and football primarily, but i also enjoy being part of a team through team sports. I also have a deep interest in history, especially medieval history, and I enjoy reading about the sociopolitical structures and military escapades of past civilizations.
                 </p>
               </div>
             </div>

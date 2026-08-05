@@ -11,7 +11,7 @@ export default function Hero({ isDark }: HeroProps) {
         <div className="space-y-8 animate-fade-in">
           <div>
             <p className={`text-sm font-semibold tracking-wider mb-4 ${
-              isDark ? 'text-indigo-400' : 'text-indigo-600'
+              isDark ? 'text-teal-400' : 'text-teal-600'
             }`}>
             </p>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
@@ -25,7 +25,7 @@ export default function Hero({ isDark }: HeroProps) {
           <p className={`text-lg leading-relaxed max-w-2xl ${
             isDark ? 'text-gray-300' : 'text-gray-700'
           }`}>
-            I enjoy learning and working on AI systems, I've taken part in projects involving physics-informed neural networks, reinforcement learning, Hardware for AI and fullstack softwares deployed end to end.
+            Building AI systems and full-stack products: from LLM research and coding assistants to real-time multiplayer platforms and ML model registries.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -33,8 +33,8 @@ export default function Hero({ isDark }: HeroProps) {
               href="#projects"
               className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-center ${
                 isDark
-                  ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
-                  : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                  ? 'bg-teal-600 hover:bg-teal-700 text-white'
+                  : 'bg-teal-600 hover:bg-teal-700 text-white'
               }`}
             >
               View Projects
@@ -43,8 +43,8 @@ export default function Hero({ isDark }: HeroProps) {
               href="#contact"
               className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-center border-2 ${
                 isDark
-                  ? 'border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-black'
-                  : 'border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white'
+                  ? 'border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-black'
+                  : 'border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white'
               }`}
             >
               Get in Touch
@@ -75,7 +75,7 @@ export default function Hero({ isDark }: HeroProps) {
                 <span className="text-sm font-medium">+91 9045 330 144</span>
               </a>
               <a
-                href="https://linkedin.com/in/saatwiktiwari"
+                href="https://www.linkedin.com/in/saatwik-tiwari-336b86301/"
                 className={`flex items-center gap-2 transition-colors duration-200 ${
                   isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
                 }`}
@@ -83,7 +83,7 @@ export default function Hero({ isDark }: HeroProps) {
                 <span className="text-sm font-medium">LinkedIn</span>
               </a>
               <a
-                href="https://github.com/saatwiktiwari"
+                href="https://github.com/Saatwik-ss"
                 className={`flex items-center gap-2 transition-colors duration-200 ${
                   isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
                 }`}

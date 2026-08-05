@@ -5,8 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
 
 :root {
-  --color-primary: #6366f1;
-  --color-secondary: #8b5cf6;
+  --color-primary: #14b8a6;
+  --color-secondary: #2dd4bf;
 }
 
 * {
@@ -46,20 +46,20 @@ textarea {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-indigo-500 dark:bg-indigo-600 rounded-full;
+  @apply bg-teal-500 dark:bg-teal-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-indigo-600 dark:bg-indigo-500;
+  @apply bg-teal-600 dark:bg-teal-500;
 }
 
 /* Selection */
 ::selection {
-  @apply bg-indigo-500 text-white;
+  @apply bg-teal-500 text-white;
 }
 
 ::-moz-selection {
-  @apply bg-indigo-500 text-white;
+  @apply bg-teal-500 text-white;
 }
 
 /* Focus states */

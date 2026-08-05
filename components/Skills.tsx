@@ -5,28 +5,28 @@ interface SkillsProps {
 export default function Skills({ isDark }: SkillsProps) {
   const skillCategories = [
     {
-      title: 'Programming Languages',
-      skills: ['Python', 'C++', 'C', 'Java', 'TypeScript', 'HTML', 'CSS', 'XML', 'YAML'],
+      title: 'Languages',
+      skills: ['C++', 'Python', 'TypeScript', 'JavaScript', 'Java', 'C', 'SQL'],
     },
     {
-      title: 'Machine Learning & AI',
-      skills: ['PyTorch', 'TensorFlow', 'NumPy', 'OpenCV', 'Neural Networks', 'Transformers', 'CNNs', 'LSTMs'],
+      title: 'Web Technologies',
+      skills: ['React.js', 'Node.js', 'FastAPI', 'Flask', 'Express.js', 'WebSockets', 'HTML/CSS', 'Prisma ORM'],
     },
     {
-      title: 'Deep Learning',
-      skills: ['Physics-Informed Neural Networks (PINNs)', 'Reinforcement Learning', 'Decision Trees', 'Policy Networks'],
+      title: 'Databases & Storage',
+      skills: ['PostgreSQL', 'MongoDB', 'Redis'],
     },
     {
-      title: 'Cloud & DevOps',
-      skills: ['Docker', 'Kubernetes', 'Flask', 'FastAPI', 'Git', 'GitHub'],
+      title: 'ML/AI Tools',
+      skills: ['PyTorch', 'TensorFlow', 'ONNX', 'JAX', 'ChromaDB'],
     },
     {
-      title: 'Simulation & Visualization',
-      skills: ['MuJoCo', 'Isaac Labs', 'Matplotlib', 'Seaborn', 'MATLAB'],
+      title: 'DevOps & Tools',
+      skills: ['Git', 'Linux', 'AWS', 'GitHub'],
     },
     {
-      title: 'Web Development',
-      skills: ['React', 'Angular', 'MongoDB', 'Node.js', 'Django', 'Next.js'],
+      title: 'Other',
+      skills: ['REST APIs', 'Machine Learning', 'Pandas', 'NumPy'],
     },
   ];
 
@@ -52,8 +52,8 @@ export default function Skills({ isDark }: SkillsProps) {
                     key={skillIdx}
                     className={`px-3 py-1 rounded-full text-sm transition-colors duration-200 ${
                       isDark
-                        ? 'bg-indigo-900 text-indigo-200 hover:bg-indigo-800'
-                        : 'bg-indigo-100 text-indigo-800 hover:bg-indigo-200'
+                        ? 'bg-teal-900 text-teal-200 hover:bg-teal-800'
+                        : 'bg-teal-100 text-teal-800 hover:bg-teal-200'
                     }`}
                   >
                     {skill}

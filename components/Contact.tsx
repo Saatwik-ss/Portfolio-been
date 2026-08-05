@@ -6,8 +6,8 @@ export default function Contact({ isDark }: ContactProps) {
   const contactMethods = [
     {
       title: 'Email',
-      value: 'saatwik.mail@gmail.com',
-      href: 'mailto:saatwik.mail@gmail.com',
+      value: 'satwiktiwari59@gmail.com',
+      href: 'mailto:satwiktiwari59@gmail.com',
       icon: 'envelope',
     },
     {
@@ -49,8 +49,8 @@ export default function Contact({ isDark }: ContactProps) {
               rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               className={`p-6 rounded-lg transition-all duration-300 ${
                 isDark
-                  ? 'bg-gray-900 hover:bg-indigo-900 border border-gray-800 hover:border-indigo-600'
-                  : 'bg-gray-50 hover:bg-indigo-50 border border-gray-200 hover:border-indigo-400'
+                  ? 'bg-gray-900 hover:bg-teal-900 border border-gray-800 hover:border-teal-600'
+                  : 'bg-gray-50 hover:bg-teal-50 border border-gray-200 hover:border-teal-400'
               }`}
             >
               <h3 className="text-lg font-semibold mb-2">{method.title}</h3>
