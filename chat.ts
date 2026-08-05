@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const GROQ_API_KEY = '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';
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 const systemPrompt = `You are Saatwik Tiwari's AI Career Copilot. You have comprehensive knowledge about Saatwik's background, projects, and expertise. Here's the information about Saatwik:
