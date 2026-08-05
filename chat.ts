@@ -100,7 +100,7 @@ export default async function handler(
     const response = await fetch(GROQ_API_URL, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${GROQ_API_KEY}`,
+        Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
