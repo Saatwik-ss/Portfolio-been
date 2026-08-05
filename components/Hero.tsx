@@ -25,7 +25,7 @@ export default function Hero({ isDark }: HeroProps) {
           <p className={`text-lg leading-relaxed max-w-2xl ${
             isDark ? 'text-gray-300' : 'text-gray-700'
           }`}>
-            Building AI systems and full-stack products: from LLM research and coding assistants to real-time multiplayer platforms and ML model registries.
+            Hi there, I am Saatwik
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
