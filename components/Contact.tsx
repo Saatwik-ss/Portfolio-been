@@ -37,7 +37,7 @@ export default function Contact({ isDark }: ContactProps) {
       <div className="max-w-4xl mx-auto">
         <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">Get in Touch</h2>
         <p className={`text-lg mb-12 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-          Feel free to reach out for collaborations or inquiries. I am always open to interesting projects and opportunities.
+          Feel free to reach out for any collaborations or opportunities. I am always open to interesting projects and opportunities.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -61,11 +61,6 @@ export default function Contact({ isDark }: ContactProps) {
           ))}
         </div>
 
-        <div className={`mt-12 pt-8 border-t ${isDark ? 'border-gray-800' : 'border-gray-200'}`}>
-          <p className={`text-sm text-center ${isDark ? 'text-gray-500' : 'text-gray-600'}`}>
-            Built with Next.js, React, and Tailwind CSS. Powered by Groq AI.
-          </p>
-        </div>
       </div>
     </section>
   );
