@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://saatwik-ss.github.io';
 const SITE_NAME = 'Saatwik Tiwari';
 const DESCRIPTION =
-  'Portfolio of Saatwik Tiwari — B.E. Mathematics & Computing at BITS Pilani Goa. AI systems, full-stack products, LLM research, and machine learning.';
+  'Hey there man whats up';
 
 export default function Document() {
   const jsonLd = {
@@ -11,8 +11,6 @@ export default function Document() {
     '@type': 'Person',
     name: 'Saatwik Tiwari',
     url: SITE_URL,
-    email: 'saatwik.mail@gmail.com',
-    telephone: '+91-9045-330-144',
     jobTitle: 'Student, Mathematics and Computing',
     alumniOf: {
       '@type': 'CollegeOrUniversity',
