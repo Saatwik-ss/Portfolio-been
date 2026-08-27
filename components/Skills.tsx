@@ -9,8 +9,8 @@ export default function Skills({ isDark }: SkillsProps) {
       skills: ['C++', 'Python', 'TypeScript', 'JavaScript', 'Java', 'C', 'SQL'],
     },
     {
-      title: 'Web Technologies',
-      skills: ['React.js', 'Node.js', 'FastAPI', 'Flask', 'Express.js', 'WebSockets', 'HTML/CSS', 'Prisma ORM'],
+      title: 'Frameworks & Backend',
+      skills: ['React.js', 'Node.js', 'FastAPI', 'Flask', 'WebSockets', 'HTML/CSS', 'Prisma ORM'],
     },
     {
       title: 'Databases & Storage',
@@ -18,15 +18,15 @@ export default function Skills({ isDark }: SkillsProps) {
     },
     {
       title: 'ML/AI Tools',
-      skills: ['PyTorch', 'TensorFlow', 'ONNX', 'JAX', 'ChromaDB'],
+      skills: ['PyTorch', 'TensorFlow', 'ONNX', 'JAX', 'ChromaDB', 'Numpy' , ''],
     },
     {
       title: 'DevOps & Tools',
       skills: ['Git', 'Linux', 'AWS', 'GitHub'],
     },
     {
-      title: 'Other',
-      skills: ['REST APIs', 'Machine Learning', 'Pandas', 'NumPy'],
+      title: 'Other Skills',
+      skills: ['REST APIs', 'Machine Learning', 'Reinforcement Learning'],
     },
   ];
 
