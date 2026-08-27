@@ -18,7 +18,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       ],
       tags: ['React', 'FastAPI', 'Node.js', 'WebSocket', 'Tree-sitter', 'LLMs'],
       github: 'https://github.com/Saatwik-ss/Crystal',
-      live: 'https://crystal-production-f6cb.up.railway.app/',
+      live: 'https://blaid.duckdns.org/',
     },
     {
       title: 'OptiMover: Multiplayer Board Game Platform',
@@ -50,7 +50,6 @@ export default function Projects({ isDark }: ProjectsProps) {
       ],
       tags: ['React', 'FastAPI', 'Node.js', 'PyTorch', 'TensorFlow', 'ONNX'],
       github: 'https://github.com/Saatwik-ss/ML-Models',
-      live: '',
     },
     {
       title: 'Differential Actor',
@@ -65,6 +64,20 @@ export default function Projects({ isDark }: ProjectsProps) {
         'Formulated physics-guided loss functions that enforce physical invariants during training, eliminating the need for explicit dynamic system models or extensive empirical rollout data.',
       ],
       tags: ['PIRL', 'PINNs', 'Reinforcement Learning', 'Optimal Control', 'Mathematics'],
+    },
+    {
+      title: 'AMH-DT: Adaptive Model-based Hierarchical Deep Tree',
+      category: 'Reinforcement Learning, Mathematics, Finance, Sequence Modelling',
+      period: 'Jan 2026 : Present',
+      status: 'Ongoing',
+      description:
+        'Adaptive DT based architecture to apply reinforcement learning and sequence modelling in long range, multi-step decision-making scenarios like stock market prediction.',
+      bullets: [
+                'Constructed a hierarchical encoder discovering latent asset dependency structures via hypergraph classification maps raw multi-asset price data to learned latent embeddings capturing cross-asset temporal dynamics and structural relationships.',
+                'Trained a causal policy on K-step trajectories conditioned on return-to-go targets with L-BFGS turnover penalties; weight prediction objective delivered a 1.21 Sharpe ratio and 18% outperformance relative to standard DT through state-specific decision routing on rolling windows.',
+                'Allocates specialized Decision Transformers to each market regime, solving the non-stationary MDP problem—avoids mode collapse of single policies by learning regime-specific credit assignment; enables 0.575% monthly alpha through specialized policy optimization within distinct market behavioral states.',
+      ],
+      tags: ['Sequence Modelling', 'Reinforcement Learning', 'Quantitative Analysis', 'Finance','Decision Transformers'],
     },
   ];
 
