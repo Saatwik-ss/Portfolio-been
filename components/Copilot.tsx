@@ -38,7 +38,7 @@ export default function Copilot({ isDark }: CopilotProps) {
   useEffect(() => {
     const showTimer = setTimeout(() => {
       setShowPopup(true);
-    }, 1500);
+    }, 500);
 
     const hideTimer = setTimeout(() => {
       setShowPopup(false);
