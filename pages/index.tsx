@@ -8,6 +8,7 @@ import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
 import Copilot from "../components/Copilot";
 import Experience from "../components/Experience";
+import Resume from "../components/Resume";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://saatwik-ss.github.io";
 
@@ -72,6 +73,10 @@ export default function Home() {
 
       <section id="projects">
         <Projects isDark={isDark} />
+      </section>
+
+      <section id="Resume">
+        <Resume />
       </section>
 
       <section id="contact">

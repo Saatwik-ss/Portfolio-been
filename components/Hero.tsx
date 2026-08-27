@@ -54,9 +54,8 @@ export default function Hero({ isDark }: HeroProps) {
               href="#Resume"
               className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-center ${
                 isDark
-                  ? 'border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-black'
-                  : 'border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white'
-              }`}
+                  ? 'bg-teal-600 hover:bg-teal-700 text-white'
+                  : 'bg-teal-600 hover:bg-teal-700 text-white'              }`}
             >
               View Resume
             </a>
