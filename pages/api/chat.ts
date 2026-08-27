@@ -49,7 +49,7 @@ Other: REST APIs, Machine Learning, Pandas, NumPy
 KEY PROJECTS:
 1. Crystal: AI Coding Assistant (Nov 2025: Present)
    - GitHub: https://github.com/Saatwik-ss/Crystal
-   - Live: https://crystal-production-f6cb.up.railway.app/
+   - Live: https://blaid.duckdns.org/
    - End-to-end AI coding assistant using React, FastAPI, Node.js, and WebSocket.
    - Context-aware sidebar with < 2s TTFT; Tree-sitter indexing > 1,000 files/min.
 
