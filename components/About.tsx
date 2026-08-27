@@ -14,7 +14,7 @@ export default function About({ isDark }: AboutProps) {
           <div className="space-y-6">
             <h3 className="text-xl font-semibold mb-4">Background</h3>
             <p className={`leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Currently a second-year student at BITS Pilani, Goa, pursuing B.E. in Mathematics and Computing. My academic focus spans Machine learning, Numerical optimization, Full-stack development, and Hardware for machine learning.
+              Currently a third-year student at BITS Pilani, Goa, pursuing B.E. in Mathematics and Computing. My academic focus spans Machine learning, Numerical optimization, Full-stack development, and Hardware for machine learning.
             </p>
             <p className={`leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               Recent work includes Crystal (an AI coding assistant), OptiMover (a multiplayer board game platform), and AIMvL (an ML model registry). I have also interned at Caarya Innovative and TCS-Research DATA-LAB, and mentored ML fundamentals for 60+ students at BITS Pilani.
