@@ -49,6 +49,17 @@ export default function Hero({ isDark }: HeroProps) {
             >
               Get in Touch
             </a>
+
+            <a
+              href="#Resume"
+              className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-center ${
+                isDark
+                  ? 'border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-black'
+                  : 'border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white'
+              }`}
+            >
+              View Resume
+            </a>
           </div>
 
           <div className={`pt-8 border-t ${isDark ? 'border-gray-800' : 'border-gray-200'}`}>
