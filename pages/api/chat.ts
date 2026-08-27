@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 const systemPrompt = `You are Saatwik Tiwari's AI Career Copilot. You have comprehensive knowledge about Saatwik's background, projects, and expertise. Here's the information about Saatwik:
@@ -103,9 +102,10 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  if (!GROQ_API_KEY) {
-    console.error('GROQ_API_KEY is missing');
-    return res.status(500).json({ error: 'API configuration error: set GROQ_API_KEY in .env.local' });
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) {
+    console.error('GROQ_API_KEY is missing from environment variables');
+    return res.status(500).json({ error: 'API configuration error: GROQ_API_KEY environment variable is not set.' });
   }
 
   try {
@@ -123,7 +123,7 @@ export default async function handler(
     const response = await fetch(GROQ_API_URL, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+        Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -140,30 +140,37 @@ export default async function handler(
       }),
     });
 
-    const responseData = await response.json();
+    const responseText = await response.text();
+    let responseData: any;
+    try {
+      responseData = JSON.parse(responseText);
+    } catch (e) {
+      responseData = null;
+    }
 
     if (!response.ok) {
-      console.error('Groq API error:', {
+      console.error('Groq API error response:', {
         status: response.status,
         statusText: response.statusText,
-        error: responseData,
+        body: responseText,
       });
 
+      const errorMsg = responseData?.error?.message || responseText || `Groq API responded with status ${response.status}`;
       return res.status(response.status).json({
-        error: responseData.error?.message || 'Failed to get response from Groq API',
+        error: `Groq API Error: ${errorMsg}`,
       });
     }
 
-    if (!responseData.choices?.[0]?.message?.content) {
-      console.error('Unexpected Groq response format:', responseData);
-      return res.status(500).json({ error: 'Invalid response format from Groq' });
+    if (!responseData || !responseData.choices?.[0]?.message?.content) {
+      console.error('Unexpected Groq response format:', responseText);
+      return res.status(500).json({ error: 'Invalid response format from Groq API' });
     }
 
     const reply = responseData.choices[0].message.content;
 
     return res.status(200).json({ reply });
   } catch (error) {
-    console.error('Chat API error:', error);
+    console.error('Chat API exception:', error);
     return res.status(500).json({
       error: error instanceof Error ? error.message : 'Internal server error',
     });

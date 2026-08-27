@@ -64,7 +64,14 @@ export default function Copilot({ isDark }: CopilotProps) {
         }),
       });
 
-      if (!response.ok) throw new Error('API Error');
+      if (!response.ok) {
+        let errMsg = 'API Error';
+        try {
+          const errorData = await response.json();
+          errMsg = errorData.error || errMsg;
+        } catch (_) {}
+        throw new Error(errMsg);
+      }
 
       const data = await response.json();
       const assistantMessage: Message = {
@@ -80,7 +87,7 @@ export default function Copilot({ isDark }: CopilotProps) {
       const errorMessage: Message = {
         id: (Date.now() + 2).toString(),
         role: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.',
+        content: error instanceof Error ? error.message : 'Sorry, I encountered an error. Please try again.',
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, errorMessage]);
