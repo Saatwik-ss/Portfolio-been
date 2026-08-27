@@ -64,10 +64,10 @@ KEY PROJECTS:
    - AI model registry with React, FastAPI, Node.js (PyTorch, TensorFlow, ONNX).
    - Training scheduler with Bayesian HPO and evaluation across 10+ models.
 
-4. Differential Actor (Jan 2026 : Mar 2026) | Reinforcement Learning, Mathematics
-   - Physics-informed reinforcement learning (PIRL) for optimal control of non-linear systems with input constraints.
-   - Coupled PINNs with asymptotic stability loss and policy iteration constraints for value function and control policy.
-   - Physics-guided losses that enforce physical invariants without explicit dynamic models or extensive rollout data.
+4. AMH-DT: Adaptive Model-based Hierarchical Deep Tree (Jan 2026 : Present) | Reinforcement Learning, Mathematics, Finance, Sequence Modelling
+   - Adaptive Multi-Horizon Decision Transformer to apply reinforcement learning and sequence modelling in long range, temporal, multi-step decision-making scenarios.
+   - Integration of hierarchical structures with deep learning for improved future prediction and decision-making.
+   - Application in financial modeling and sequence prediction tasks.
 
 INTERESTS & PASSIONS:
 - Sports: Boxing and football
