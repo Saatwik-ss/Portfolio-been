@@ -61,7 +61,7 @@ const experiences = [
     title: "Research Member",
     organization: "DataLab",
     description:
-      "Participated in data science and machine learning research initiatives.",
+      "Participated in data science and machine learning research initiatives under various distinguished professors.",
     bullets: [
       "Model development and experimentation",
       "Potential paper under review",
