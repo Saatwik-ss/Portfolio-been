@@ -23,6 +23,7 @@ export default function Copilot({ isDark }: CopilotProps) {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -33,6 +34,27 @@ export default function Copilot({ isDark }: CopilotProps) {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    const showTimer = setTimeout(() => {
+      setShowPopup(true);
+    }, 1500);
+
+    const hideTimer = setTimeout(() => {
+      setShowPopup(false);
+    }, 8500);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      setShowPopup(false);
+    }
+  }, [isOpen]);
 
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -119,6 +141,42 @@ export default function Copilot({ isDark }: CopilotProps) {
           </svg>
         )}
       </button>
+
+      {/* Welcome Callout Popup */}
+      <div
+        className={`fixed bottom-24 right-6 z-30 transition-all duration-500 transform ${
+          showPopup ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-95 pointer-events-none'
+        }`}
+      >
+        <div
+          className={`relative px-4 py-3 rounded-xl shadow-2xl text-sm max-w-[240px] ${
+            isDark
+              ? 'bg-gray-900 border border-gray-800 text-gray-100'
+              : 'bg-white border border-gray-200 text-gray-800'
+          }`}
+        >
+          <button
+            onClick={() => setShowPopup(false)}
+            className="absolute top-2.5 right-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+            aria-label="Close notification"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <p className="pr-5 font-medium leading-relaxed">
+            Hi there! Is there anything you need?
+          </p>
+          {/* Tooltip Arrow */}
+          <div
+            className={`absolute -bottom-1.5 right-6 w-3 h-3 rotate-45 border-r border-b ${
+              isDark
+                ? 'bg-gray-900 border-gray-800'
+                : 'bg-white border-gray-200'
+            }`}
+          />
+        </div>
+      </div>
 
       {isOpen && (
         <div className={`fixed bottom-24 right-6 w-96 max-h-96 rounded-lg shadow-2xl flex flex-col transition-all duration-300 z-40 ${
