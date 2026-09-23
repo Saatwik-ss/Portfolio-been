@@ -8,18 +8,6 @@ interface ExperienceProps {
 
 const experiences = [
   {
-    title: "Intern",
-    organization: "Caarya Innovative",
-    period: "May 2026: July 2026 | Remote",
-    status: "Completed",
-    description:
-      "BITS Pilani Practice School-I Program focused on AI applications, product development, and software engineering.",
-    bullets: [
-      "Built and deployed an AI-powered Root Cause Analysis (RCA) agent using React, Node.js, and LLM-based prompt engineering to automate structured Five Whys analysis with iterative user interaction.",
-      "Industry mentorship on AI applications and product development as part of the BITS Pilani PS-I program.",
-    ],
-  },
-  {
     title: "Research Intern",
     organization: "TCS-Research, DATA-LAB",
     period: "Jan 2026: Apr 2026 | Remote",
@@ -32,6 +20,19 @@ const experiences = [
       "Research paper on LLM sycophancy currently under peer review.",
     ],
   },
+  {
+    title: "Intern",
+    organization: "Caarya Innovative",
+    period: "May 2026: July 2026 | Remote",
+    status: "Completed",
+    description:
+      "BITS Pilani Practice School-I Program focused on AI applications, product development, and software engineering.",
+    bullets: [
+      "Built and deployed an AI-powered Root Cause Analysis (RCA) agent using React, Node.js, and LLM-based prompt engineering to automate structured Five Whys analysis with iterative user interaction.",
+      "Industry mentorship on AI applications and product development as part of the BITS Pilani PS-I program.",
+    ],
+  },
+
   {
     title: "Course Mentor",
     organization: "Center for Technical Education, BITS Pilani",
