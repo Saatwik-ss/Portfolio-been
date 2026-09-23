@@ -6,27 +6,27 @@ export default function Skills({ isDark }: SkillsProps) {
   const skillCategories = [
     {
       title: 'Languages',
-      skills: ['C++', 'Python', 'TypeScript', 'JavaScript', 'Java', 'C', 'SQL'],
+      skills: ['Python', 'C++', 'C', 'Java', 'TypeScript', 'JavaScript', 'SQL'],
     },
     {
       title: 'Frameworks & Backend',
-      skills: ['React.js', 'Node.js', 'FastAPI', 'Flask', 'WebSockets', 'HTML/CSS', 'Prisma ORM'],
+      skills: ['React.js', 'Node.js', 'FastAPI', 'Flask', 'WebSockets', 'HTML/CSS', 'Prisma ORM', 'Express', 'Rest APIs'],
     },
     {
-      title: 'Databases & Storage',
-      skills: ['PostgreSQL', 'MongoDB', 'Redis'],
+      title: 'Databases & Infrastructure',
+      skills: ['PostgreSQL', 'MongoDB', 'Redis',  'SQLite'],
     },
     {
       title: 'ML/AI Tools',
-      skills: ['PyTorch', 'TensorFlow', 'ONNX', 'JAX', 'ChromaDB', 'Numpy' , ''],
+      skills: ['PyTorch', 'TensorFlow', 'ONNX', 'JAX', 'ChromaDB', 'Numpy', 'LangChain','HuggingFace' ],
     },
     {
       title: 'DevOps & Tools',
-      skills: ['Git', 'Linux', 'AWS', 'GitHub'],
+      skills: ['Git', 'Linux', 'AWS', 'AWS Sagemaker','GitHub', 'Railway'],
     },
     {
       title: 'Other Skills',
-      skills: ['REST APIs', 'Machine Learning', 'Reinforcement Learning'],
+      skills: ['Reinforcement Learning','RAG', 'Fine-tuning','MLOps'],
     },
   ];
 

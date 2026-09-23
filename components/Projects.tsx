@@ -1,83 +1,80 @@
 interface ProjectsProps {
   isDark: boolean;
 }
-
 export default function Projects({ isDark }: ProjectsProps) {
   const projects = [
     {
-      title: 'Crystal: AI Coding Assistant',
-      category: 'Software Engineering, AI Systems',
+      title: 'Crystal AI Coding Assistant[cite: 1]',
+      category: 'AI Systems, Software Engineering[cite: 1]',
       period: 'Nov 2025: Present',
-      status: 'Ongoing',
       description:
-        'End-to-end AI coding assistant with real-time repository-wide editing, indexing, and streaming LLM inference over WebSockets.',
+        'Built an AI coding harness for real-time coding suggestions and repo-wide code generation/debugging via programming aligned LLMs.[cite: 1]',
       bullets: [
-        'Built with React, FastAPI, Node.js, and WebSocket for progressive code completion and repository indexing.',
-        'Context-aware sidebar assistant grounded in the active file, achieving < 2s time-to-first-token (TTFT).',
-        'Multi-language code intelligence pipeline (Python, JavaScript, TypeScript) using semantic search and Tree-sitter, indexing > 1,000 files/min.',
+        'Built an AI coding harness for real-time coding suggestions and repo-wide code generation/debugging via programming aligned LLMs; indexed 1,000+ files/min and achieved sub-2s TTFT using dependency graphs, semantic search, and RAG.[cite: 1]',
+        'Debugged and optimized production bottlenecks in FastAPI/Node.js backends, attaining sub-1s message latency; implemented LLM-driven Plan Mode and testing blocks for reliable code generation and execution.[cite: 1]',
+        'Engineered a FastAPI/Node.js backend combining REST APIs and WebSocket communication, supporting 10+ simultaneous users with low message latency.[cite: 1]',
       ],
       tags: ['React', 'FastAPI', 'Node.js', 'WebSocket', 'Tree-sitter', 'LLMs'],
       github: 'https://github.com/Saatwik-ss/Crystal',
       live: 'https://blaid.duckdns.org/',
     },
     {
-      title: 'OptiMover: Multiplayer Board Game Platform',
-      category: 'Full-stack Development',
+      title: 'OptiMover - Multiplayer Game Platform & Adaptive AlphaZero[cite: 1]',
+      category: 'Full-stack, RL, Game AI[cite: 1]',
       period: 'Feb 2025: Apr 2025',
-      status: 'Completed',
       description:
-        'Full-stack multiplayer board game platform with real-time human vs RL-AI gameplay, auth, and persistent sessions.',
+        'Architected a full-stack multiplayer board-game platform with Prisma ORM, persistent sessions, Elo rankings, match history and multi-level AI agents.[cite: 1]',
       bullets: [
-        'Built with React, Node.js, TypeScript, WebSocket, and Prisma for real-time gameplay and authentication.',
-        'Integrated an AlphaZero-based RL model with MCTS achieving 52–74% win rate against human players.',
-        'Sub-100ms latency game updates and Elo-based ranking with Prisma ORM for users, matches, and history.',
+        'Architected a full-stack multiplayer board-game platform with Prisma ORM, persistent sessions, Elo rankings, match history and multi-level Al agents; tested with 20+ concurrent users achieving sub-100ms real-time update latency.[cite: 1]',
+        'Integrated an AlphaZero-based reinforcement learning system using Monte Carlo Tree Search with policy/value networks for strategic board games, achieving 52-74% win rates against human players and baseline minimax algorithms.[cite: 1]',
+        'Addressed cold-start inefficiency through warm-start initialization with smaller CNN policy networks, reducing sample complexity and accelerating MCTS convergence versus standard self-play from scratch.[cite: 1]',
+        'Engineered state-dependent MCTS depth allocation, dynamically adapting rollout budgets and network capacity across domains such as Connect-4 and Chess for improved compute efficiency and convergence.[cite: 1]',
+        'Implemented an Elo-based ranking system with persistent users, matches, ratings, and game history while achieving sub-100ms real-time update latency.[cite: 1]',
       ],
-      tags: ['React', 'Node.js', 'TypeScript', 'WebSocket', 'Prisma', 'RL'],
+      tags: ['React', 'Node.js', 'TypeScript', 'WebSocket', 'Prisma', 'RL', 'AlphaZero'],
       github: 'https://github.com/Saatwik-ss/OptiMover',
       live: 'https://optimover-1.onrender.com',
     },
     {
-      title: 'AIMvL: GitHub for ML Models',
-      category: 'Machine Learning, Full-stack Development',
+      title: 'AIMVL GitHub for ML Models[cite: 1]',
+      category: 'Machine Learning Systems, MLOps[cite: 1]',
       period: 'May 2025: Dec 2025',
-      status: 'Completed',
       description:
-        'AI model registry supporting PyTorch, TensorFlow, and ONNX with training, inference, and lifecycle management.',
+        'Implemented a full-stack AI model registry supporting PyTorch, TensorFlow, and ONNX models with versioning, training, inference, lifecycle management, and deployment.[cite: 1]',
       bullets: [
-        'Full-stack registry with React, FastAPI, and Node.js for upload, versioning, training, and deployment.',
-        'Training job scheduler with Bayesian hyperparameter optimization and GPU resource scheduling.',
-        'Automated execution and evaluation pipeline across 10+ machine learning models.',
+        'Implemented a full-stack Al model registry using React and Node.js, supporting PyTorch, TensorFlow, and ONNX models with versioning, training, inference, lifecycle management, and deployment through a unified interface.[cite: 1]',
+        'Designed 15+ training recipes across 8+ architectures and engineered an asynchronous scheduler for concurrent GPU-accelerated jobs with Bayesian hyperparameter optimization, achieving 10-30% performance gains over baseline configurations.[cite: 1]',
+        'Built an end-to-end reproducible ML pipeline with dataset versioning, artifact storage, and evaluation dashboards, reducing model deployment time from 1 hour to 5 minutes.[cite: 1]',
       ],
-      tags: ['React', 'FastAPI', 'Node.js', 'PyTorch', 'TensorFlow', 'ONNX'],
+      tags: ['React', 'Node.js', 'PyTorch', 'TensorFlow', 'ONNX', 'MLOps'],
       github: 'https://github.com/Saatwik-ss/ML-Models',
     },
     {
-      title: 'Differential Actor',
-      category: 'Reinforcement Learning, Mathematics',
+      title: 'PIRL - Physics-Informed Reinforcement Learning[cite: 1]',
+      category: 'RL, Control Theory, Scientific ML[cite: 1]',
       period: 'Jan 2026 : Mar 2026',
-      status: 'Completed',
       description:
-        'Physics-informed reinforcement learning framework for optimal control of non-linear systems with input constraints.',
+        'Developed a framework combining physical constraints with deep reinforcement learning for optimal control of nonlinear systems.[cite: 1]',
       bullets: [
-        'Developed a physics-informed reinforcement learning (PIRL) framework to solve optimal control problems for non-linear systems with input constraints.',
-        'Architected coupled Physics-Informed Neural Networks (PINNs) incorporating asymptotic stability loss terms and policy iteration convergence constraints to approximate value function and control policy.',
-        'Formulated physics-guided loss functions that enforce physical invariants during training, eliminating the need for explicit dynamic system models or extensive empirical rollout data.',
+        'Developed a framework combining physical constraints with deep reinforcement learning for optimal control of nonlinear systems, using physics-guided loss functions to enforce physical invariants during training.[cite: 1]',
+        'Achieved 8.7x lower training time than Vanilla PINN through smart initialization, eliminating costly hyperparameter tuning while improving training efficiency.[cite: 1]',
+        'Achieved 100% convergence across tested cases versus 33% for Vanilla PINN at λ=1 with R² ≥ 0.999 for inlet-velocity prediction.[cite: 1]',
       ],
-      tags: ['PIRL', 'PINNs', 'Reinforcement Learning', 'Optimal Control', 'Mathematics'],
+      tags: ['PIRL', 'PINNs', 'Reinforcement Learning', 'Optimal Control', 'Scientific ML'],
     },
     {
-      title: 'AMH-DT: Adaptive Model-based Hierarchical Deep Tree',
-      category: 'Reinforcement Learning, Mathematics, Finance, Sequence Modelling',
+      title: 'Adaptive Multi-Horizon Decision Transformer (AMH-DT)[cite: 1]',
+      category: 'Reinforcement Learning, Finance[cite: 1]',
       period: 'Jan 2026 : Present',
       status: 'Ongoing',
       description:
-        'Adaptive DT based architecture to apply reinforcement learning and sequence modelling in long range, multi-step decision-making scenarios like stock market prediction.',
+        'Developed hierarchical RL for multi-asset forecasting with hypergraph-based dependencies and regime-specific Decision Transformers.[cite: 1]',
       bullets: [
-                'Constructed a hierarchical encoder discovering latent asset dependency structures via hypergraph classification maps raw multi-asset price data to learned latent embeddings capturing cross-asset temporal dynamics and structural relationships.',
-                'Trained a causal policy on K-step trajectories conditioned on return-to-go targets with L-BFGS turnover penalties; weight prediction objective delivered a 1.21 Sharpe ratio and 18% outperformance relative to standard DT through state-specific decision routing on rolling windows.',
-                'Allocates specialized Decision Transformers to each market regime, solving the non-stationary MDP problem—avoids mode collapse of single policies by learning regime-specific credit assignment; enables 0.575% monthly alpha through specialized policy optimization within distinct market behavioral states.',
+        'Developed hierarchical RL for multi-asset forecasting with hypergraph-based dependencies and regime-specific Decision Transformers, improving stock performance by 18% over vanilla sequence-modelling architectures.[cite: 1]',
+        'Achieved 1.21 Sharpe ratio, 13% outperformance vs standard Decision Transformer, and 0.575% monthly alpha via adaptive policy routing with learned credit assignment across market regimes.[cite: 1]',
+        'Trained regime-specific Decision Transformers on K-step trajectories with return-to-go conditioning and L-BFGS turnover penalties, using adaptive policy routing based on learned credit assignment.[cite: 1]',
       ],
-      tags: ['Sequence Modelling', 'Reinforcement Learning', 'Quantitative Analysis', 'Finance','Decision Transformers'],
+      tags: ['Sequence Modelling', 'Reinforcement Learning', 'Finance', 'Decision Transformers'],
     },
   ];
 
@@ -112,17 +109,19 @@ export default function Projects({ isDark }: ProjectsProps) {
                     {project.description}
                   </p>
                 </div>
-                <span className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
-                  project.status === 'Ongoing'
-                    ? isDark
-                      ? 'bg-teal-900 text-teal-200'
-                      : 'bg-teal-100 text-teal-800'
-                    : isDark
-                    ? 'bg-cyan-900 text-cyan-200'
-                    : 'bg-cyan-100 text-cyan-800'
-                }`}>
-                  {project.status}
-                </span>
+                {project.status && (
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
+                    project.status === 'Ongoing'
+                      ? isDark
+                        ? 'bg-teal-900 text-teal-200'
+                        : 'bg-teal-100 text-teal-800'
+                      : isDark
+                      ? 'bg-cyan-900 text-cyan-200'
+                      : 'bg-cyan-100 text-cyan-800'
+                  }`}>
+                    {project.status}
+                  </span>
+                )}
               </div>
 
               <ul className={`mb-4 space-y-2 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
