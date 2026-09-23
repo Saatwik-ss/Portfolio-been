@@ -8,7 +8,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       category: 'AI Systems, Software Engineering',
       period: 'Nov 2025: Present',
       description:
-        'Built an AI coding harness for real-time coding suggestions and repo-wide code generation/debugging via programming aligned LLMs.',
+        'AI coding harness for in-line coding suggestions and repo-wide code generation/debugging',
       bullets: [
         'Built an AI coding harness for real-time coding suggestions and repo-wide code generation/debugging via programming aligned LLMs; indexed 1,000+ files/min and achieved sub-2s TTFT using dependency graphs, semantic search, and RAG.',
         'Debugged and optimized production bottlenecks in FastAPI/Node.js backends, attaining sub-1s message latency; implemented LLM-driven Plan Mode and testing blocks for reliable code generation and execution.',
@@ -23,7 +23,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       category: 'Full-stack, RL, Game AI',
       period: 'Feb 2025: Apr 2025',
       description:
-        'Architected a full-stack multiplayer board-game platform with Prisma ORM, persistent sessions, Elo rankings, match history and multi-level AI agents.',
+        'Multiplayer board-game platform for Chess and Connect4 ,',
       bullets: [
         'Architected a full-stack multiplayer board-game platform with Prisma ORM, persistent sessions, Elo rankings, match history and multi-level Al agents; tested with 20+ concurrent users achieving sub-100ms real-time update latency.',
         'Integrated an AlphaZero-based reinforcement learning system using Monte Carlo Tree Search with policy/value networks for strategic board games, achieving 52-74% win rates against human players and baseline minimax algorithms.',
@@ -40,7 +40,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       category: 'Machine Learning Systems, MLOps',
       period: 'May 2025: Dec 2025',
       description:
-        'Implemented a full-stack AI model registry supporting PyTorch, TensorFlow, and ONNX models with versioning, training, inference, lifecycle management, and deployment.',
+        'HuggingFcae like AI model registry supporting PyTorch, TensorFlow, and ONNX models with versioning, training, inference, lifecycle management, and deployment.',
       bullets: [
         'Implemented a full-stack Al model registry using React and Node.js, supporting PyTorch, TensorFlow, and ONNX models with versioning, training, inference, lifecycle management, and deployment through a unified interface.',
         'Designed 15+ training recipes across 8+ architectures and engineered an asynchronous scheduler for concurrent GPU-accelerated jobs with Bayesian hyperparameter optimization, achieving 10-30% performance gains over baseline configurations.',
@@ -54,7 +54,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       category: 'RL, Control Theory, Scientific ML',
       period: 'Jan 2026 : Mar 2026',
       description:
-        'Developed a framework combining physical constraints with deep reinforcement learning for optimal control of nonlinear systems.',
+        'Deep RL and Pinns for optimal control of nonlinear systems.',
       bullets: [
         'Developed a framework combining physical constraints with deep reinforcement learning for optimal control of nonlinear systems, using physics-guided loss functions to enforce physical invariants during training.',
         'Achieved 8.7x lower training time than Vanilla PINN through smart initialization, eliminating costly hyperparameter tuning while improving training efficiency.',
@@ -68,7 +68,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       period: 'Jan 2026 : Present',
       status: 'Ongoing',
       description:
-        'Developed hierarchical RL for multi-asset forecasting with hypergraph-based dependencies and regime-specific Decision Transformers.',
+        'Sequence modeller for specialized multi-asset portfolio forecasting',
       bullets: [
         'Developed hierarchical RL for multi-asset forecasting with hypergraph-based dependencies and regime-specific Decision Transformers, improving stock performance by 18% over vanilla sequence-modelling architectures.',
         'Achieved 1.21 Sharpe ratio, 13% outperformance vs standard Decision Transformer, and 0.575% monthly alpha via adaptive policy routing with learned credit assignment across market regimes.',
