@@ -41,7 +41,7 @@ export default function Hero({ isDark }: HeroProps) {
             </a>
             <a
               href="#contact"
-              className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-center border-2 ${
+              className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-center ${
                 isDark
                   ? 'bg-teal-600 hover:bg-teal-700 text-white'
                   : 'bg-teal-600 hover:bg-teal-700 text-white'  
