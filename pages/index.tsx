@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio site</title>
+        <title>Saatwik Tiwari</title>
         <meta name="description" content="Portfolio of Saatwik Tiwari — B.E. Mathematics & Computing at BITS Pilani Goa. AI systems, full-stack products, LLM research, and machine learning." />
         <link rel="canonical" href={SITE_URL} />
       </Head>
